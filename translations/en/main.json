@@ -1,0 +1,17 @@
+{
+    "appName": "N Editor",
+    "Download and Install Now": "Download and Install Now",
+    "Download and Install Later": "Download and Install Later",
+    "Don't ask me again": "Don't ask me again",
+    "Remind me later": "Remind me later",
+    "Skip this version": "Skip this version",
+    "Application Update": "Application Update",
+    "newVersionAvailable": "A new version of N Editor ({{version}}) is available.",
+    "There are currently no updates available": "There are currently no updates available",
+    "updateDownloadBackground": "{{appName}} will download the update in the background",
+    "The application will automatically restart and install the update once the download is complete": "The application will automatically restart and install the update once the download is complete",
+    "You can keep using the application as usual. The update will be installed in the background after you quit the application.": "You can keep using the application as usual. The update will be installed after you quit the application.",
+    "restartInstallVersion": "{{appName}} is about to restart and install version {{version}}.",
+    "restartInstallVersionEditor": "{{appName}} is about to restart and install version {{version}}. You can save your files beforehand.",
+    "updateReady": "{{appName}} update is ready"
+}
