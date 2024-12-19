@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nicolas Vannier Portfolio</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <style>
     :root {
       --primary-color: #008080;
@@ -11,6 +13,10 @@
       --background-color: #f1f5f9;
       --text-color: #334155;
       --light-text: #ffffff;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -40,23 +46,43 @@
     }
 
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
+      position: relative;
       background: var(--secondary-color);
       padding: 15px;
     }
 
-    nav a {
-      color: var(--light-text);
+    #menu-toggle {
+      display: none;
+    }
+
+    #menu-icon {
+      display: none;
+      font-size: 1.5em;
+      cursor: pointer;
+      background: var(--secondary-color);
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+
+    /* Navigation Links */
+    #nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    #nav-links a {
       text-decoration: none;
-      font-size: 1em;
+      color: var(--light-text);
       padding: 10px 20px;
-      border-radius: 10px;
+      border-radius: 5px;
       transition: background 0.3s;
     }
 
-    nav a:hover {
+    #nav-links a:hover {
       background: var(--primary-color);
     }
 
@@ -114,8 +140,78 @@
       color: var(--primary-color);
       margin-bottom: 5px;
     }
+
+    /* General Styles for Small Screens */
+    @media (max-width: 768px) {
+      #menu-icon {
+        display: block;
+        margin-top: 0;
+      }
+
+      nav {
+        padding: 0;
+      }
+
+      #nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background: var(--secondary-color);
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      #menu-toggle:checked+#menu-icon+#nav-links {
+        display: flex;
+      }
+
+      #nav-links a {
+        color: white;
+        margin: 5px 0;
+      }
+
+      section {
+        padding: 15px;
+        margin: 20px auto;
+      }
+
+      .portfolio-item {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .portfolio-item img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 10px;
+      }
+
+      .portfolio-item div {
+        text-align: center;
+      }
+
+      header {
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      header p {
+        font-size: 1em;
+      }
+
+      footer {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Nicolas Vannier</h1>
@@ -123,13 +219,17 @@
   </header>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-    <a href="assets/CV-VANNIER_Nicolas.pdf" download>Resume</a>
-    <a href="https://github.com/Nayael" target="_blank">GitHub</a>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" id="menu-icon" aria-label="Toggle navigation">☰</label>
+    <div id="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a href="assets/CV-VANNIER_Nicolas.pdf" download>Resume</a>
+      <a href="https://github.com/Nayael" target="_blank">GitHub</a>
+    </div>
   </nav>
 
   <section id="about">
@@ -232,4 +332,5 @@
     &copy; 2024 Nicolas Vannier. All rights reserved. | <a href="https://github.com/Nayael" target="_blank">GitHub</a>
   </footer>
 </body>
+
 </html>
