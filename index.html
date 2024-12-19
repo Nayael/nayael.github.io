@@ -20,6 +20,7 @@
         opacity: 0;
         transform: translateY(20px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -31,6 +32,7 @@
         transform: translateX(-20px);
         opacity: 0;
       }
+
       to {
         transform: translateX(0);
         opacity: 1;
@@ -42,9 +44,34 @@
         max-height: 0;
         opacity: 0;
       }
+
       to {
         max-height: 500px;
         opacity: 1;
+      }
+    }
+
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideLeftFadeIn {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
       }
     }
 
@@ -64,20 +91,45 @@
     header {
       background: var(--primary-color);
       color: var(--light-text);
-      text-align: center;
       padding: 40px 20px;
       position: relative;
       z-index: 1;
     }
 
+    /* Header Content Layout */
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    /* Profile Picture Styles */
+    .profile-picture {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid white;
+      object-fit: cover;
+      animation: fadeInScale 0.35s ease-in-out;
+    }
+
+    /* Header Text Animation */
+    header h1,
+    header p {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideLeftFadeIn 0.35s ease-in-out forwards;
+    }
+
     header h1 {
-      font-size: 2.8em;
-      margin: 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      animation-delay: 0.2s;
     }
 
     header p {
-      font-size: 1.2em;
-      margin: 10px 0 0;
+      animation-delay: 0.4s;
     }
 
     nav {
@@ -241,6 +293,7 @@
 
       header {
         padding: 20px;
+        text-align: center;
       }
 
       header h1 {
@@ -261,8 +314,13 @@
 
 <body>
   <header>
-    <h1>NICOLAS VANNIER</h1>
-    <p><em>Full-stack Developer | Focused on Performance and User Experience</em></p>
+    <div class="header-content">
+      <img src="assets/imgs/avatar.jpg" alt="Your Profile Picture" class="profile-picture">
+      <div>
+        <h1>NICOLAS VANNIER</h1>
+        <p><em>Full-stack Developer | Focused on Performance and User Experience</em></p>
+      </div>
+    </div>
   </header>
 
   <nav>
