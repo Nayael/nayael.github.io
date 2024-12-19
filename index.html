@@ -1,219 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicolas Vannier Portfolio</title>
-    <style>
-        :root {
-            --primary-color: #008080;
-            --secondary-color: #1e293b;
-            --background-color: #f1f5f9;
-            --text-color: #334155;
-            --light-text: #ffffff;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicolas Vannier Portfolio</title>
+  <style>
+    :root {
+      --primary-color: #008080;
+      --secondary-color: #1e293b;
+      --background-color: #f1f5f9;
+      --text-color: #334155;
+      --light-text: #ffffff;
+    }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
 
-        header {
-            background: var(--primary-color);
-            color: var(--light-text);
-            text-align: center;
-            padding: 40px 20px;
-        }
+    header {
+      background: var(--primary-color);
+      color: var(--light-text);
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-        header h1 {
-            font-size: 2.8em;
-            margin: 0;
-        }
+    header h1 {
+      font-size: 2.8em;
+      margin: 0;
+    }
 
-        header p {
-            font-size: 1.2em;
-            margin: 10px 0 0;
-        }
+    header p {
+      font-size: 1.2em;
+      margin: 10px 0 0;
+    }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            background: var(--secondary-color);
-            padding: 15px;
-        }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background: var(--secondary-color);
+      padding: 15px;
+    }
 
-        nav a {
-            color: var(--light-text);
-            text-decoration: none;
-            font-size: 1em;
-            padding: 10px 20px;
-            border-radius: 10px;
-            transition: background 0.3s;
-        }
+    nav a {
+      color: var(--light-text);
+      text-decoration: none;
+      font-size: 1em;
+      padding: 10px 20px;
+      border-radius: 10px;
+      transition: background 0.3s;
+    }
 
-        nav a:hover {
-            background: var(--primary-color);
-        }
+    nav a:hover {
+      background: var(--primary-color);
+    }
 
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        section h2 {
-            text-align: center;
-            color: var(--primary-color);
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
+    section h2 {
+      text-align: center;
+      color: var(--primary-color);
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
 
-        .portfolio-item {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
+    .portfolio-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
 
-        .portfolio-item img {
-            width: 250px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    .portfolio-item img {
+      width: 250px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        footer {
-            background: var(--secondary-color);
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
+    footer {
+      background: var(--secondary-color);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
 
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    a:hover {
+      text-decoration: underline;
+    }
 
-        .experience-item {
-            margin-bottom: 20px;
-        }
+    .experience-item {
+      margin-bottom: 20px;
+    }
 
-        .experience-item h3 {
-            color: var(--primary-color);
-            margin-bottom: 5px;
-        }
-    </style>
+    .experience-item h3 {
+      color: var(--primary-color);
+      margin-bottom: 5px;
+    }
+  </style>
 </head>
 <body>
-
-<header>
+  <header>
     <h1>Nicolas Vannier</h1>
     <p>Full-stack Developer | Focused on Performance and User Experience</p>
-</header>
+  </header>
 
-<nav>
+  <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#portfolio">Portfolio</a>
     <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
+    <a href="assets/CV-VANNIER_Nicolas.pdf" download>Resume</a>
     <a href="https://github.com/Nayael" target="_blank">GitHub</a>
-</nav>
+  </nav>
 
-<section id="about">
+  <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I’m Nicolas Vannier, a full-stack developer based in Cluj-Napoca, Romania. I create impactful web and mobile solutions with a focus on innovation, performance and user experience.</p>
-</section>
+    <p>Hello! I’m Nicolas Vannier, a full-stack developer based in Cluj-Napoca, Romania. I create impactful web and
+      mobile solutions with a focus on innovation, performance and user experience.</p>
+  </section>
 
-<section id="skills">
+  <section id="skills">
     <h2>Skills</h2>
     <p>Here are some of the technologies I work with:</p>
     <ul>
-        <li>HTML, CSS, JavaScript, React, React Native</li>
-        <li>Node.js, PHP, MySQL, NoSQL</li>
-        <li>Unity3D, C#, Docker, Linux System Administration</li>
-        <li>Design Tools: Photoshop, Illustrator, InDesign</li>
+      <li>HTML, CSS, JavaScript, React, React Native</li>
+      <li>Node.js, PHP, MySQL, NoSQL</li>
+      <li>Unity3D, C#, Docker, Linux System Administration</li>
+      <li>Design Tools: Photoshop, Illustrator, InDesign</li>
+      <li>Spoken Languages: French (Native), English (Fluent), and Romanian (Fluent)</li>
     </ul>
-</section>
+  </section>
 
-<section id="portfolio">
-	<h2>Portfolio</h2>
-	<div class="portfolio-item">
-			<div>
-					<img src="assets/imgs/neditor.png" alt="Neditor Project">
-			</div>
-			<div>
-					<h3><a href="https://nicolas-vannier.io/neditor" target="_blank">Neditor</a></h3>
-					<p>A versatile node editor for processes or state machines with an intuitive interface. Developed in React, originally as a desktop app with Electron. The desktop version has a few extra features, such as encoding project files, or keeping track of recent files.</p>
-			</div>
-	</div>
-	<div class="portfolio-item">
-			<div>
-					<img src="assets/imgs/sdl.png" alt="Super Danny Live Project">
-			</div>
-			<div>
-					<h3><a href="https://superdannylive.com/home/" target="_blank">Super Danny Live</a></h3>
-					<p>A video platform created for a French content creator, allowing followers to enjoy his videos. Includes a subscription system for accessing private content.</p>
-			</div>
-	</div>
-	<div class="portfolio-item">
-			<div>
-					<img src="assets/imgs/compass.png" alt="Syneto Compass Project">
-			</div>
-			<div>
-					<h3><a href="https://synetonet.github.io/compass-react/" target="_blank">Syneto Compass</a></h3>
-					<p>A UI component library built with React, designed for use across Syneto company projects to streamline development and ensure consistent design.</p>
-			</div>
-	</div>
-	<div class="portfolio-item">
-			<div>
-					<img src="assets/imgs/itsmystory.jpg" alt="It's My Story">
-			</div>
-			<div>
-					<h3><a href="https://www.youtube.com/watch?v=lxFvYKas4wQ" target="_blank">It's My Story</a></h3>
-					<p>A puzzle game where players strategically place objects to help Bruno, the hero, overcome obstacles and complete his story. Designed for single players on tablets. Created as a graduation project at ISART DIGITAL.</p>
-			</div>
-	</div>
-</section>
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-item">
+      <div>
+        <a href="https://nicolas-vannier.io/neditor" target="_blank">
+          <img src="assets/imgs/neditor.png" alt="Neditor Project">
+        </a>
+      </div>
+      <div>
+        <h3><a href="https://nicolas-vannier.io/neditor" target="_blank">Neditor</a></h3>
+        <p>A versatile node editor for processes or state machines with an intuitive interface. Developed in React,
+          originally as a desktop app with Electron. The desktop version has a few extra features, such as encoding
+          project files, or keeping track of recent files.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <div>
+        <a href="https://superdannylive.com/home/" target="_blank">
+          <img src="assets/imgs/sdl.png" alt="Super Danny Live Project">
+        </a>
+      </div>
+      <div>
+        <h3><a href="https://superdannylive.com/home/" target="_blank">Super Danny Live</a></h3>
+        <p>A video platform created for a French content creator, allowing followers to enjoy his videos. Includes a
+          subscription system for accessing private content.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <div>
+        <a href="https://synetonet.github.io/compass-react/" target="_blank">
+          <img src="assets/imgs/compass.png" alt="Syneto Compass Project">
+        </a>
+      </div>
+      <div>
+        <h3><a href="https://synetonet.github.io/compass-react/" target="_blank">Syneto Compass</a></h3>
+        <p>A UI component library built with React, designed for use across Syneto company projects to streamline
+          development and ensure consistent design.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <div>
+        <a href="https://www.youtube.com/watch?v=lxFvYKas4wQ" target="_blank">
+          <img src="assets/imgs/itsmystory.jpg" alt="It's My Story">
+        </a>
+      </div>
+      <div>
+        <h3><a href="https://www.youtube.com/watch?v=lxFvYKas4wQ" target="_blank">It's My Story</a></h3>
+        <p>A puzzle game where players strategically place objects to help the hero overcome obstacles and complete his
+          story. Designed for single players on tablets. I was game designer and lead programmer on this graduation
+          project at ISART DIGITAL.</p>
+      </div>
+    </div>
+  </section>
 
-<section id="experience">
+  <section id="experience">
     <h2>Experience</h2>
     <div class="experience-item">
-        <h3>Senior Frontend Developer at Syneto (2021 - Present)</h3>
-        <p>Maintaining and enhancing SynetoOS's frontend, including developing in-house JavaScript frameworks.</p>
+      <h3>Senior Frontend Developer at Syneto (2021 - Present)</h3>
+      <p>Maintaining and enhancing SynetoOS's frontend, including developing in-house JavaScript frameworks.</p>
     </div>
     <div class="experience-item">
-        <h3>Full-stack Software Developer at Persistant Studios (2014 - 2021)</h3>
-        <p>Led web development teams and built diverse projects, from SPAs to complex APIs and mobile apps.</p>
+      <h3>Full-stack Software Developer at Persistant Studios (2014 - 2021)</h3>
+      <p>Led web development teams and built diverse projects, from SPAs to complex APIs and mobile apps.</p>
     </div>
     <div class="experience-item">
-        <h3>Junior Developer/Game Designer at Pinpin Team (2013 - 2014)</h3>
-        <p>Developed RESTful APIs and designed educational games for web and mobile platforms.</p>
+      <h3>Junior Developer/Game Designer at Pinpin Team (2013 - 2014)</h3>
+      <p>Developed RESTful APIs and designed educational games for web and mobile platforms.</p>
     </div>
-</section>
+  </section>
 
-<section id="contact">
+  <section id="contact">
     <h2>Contact Me</h2>
     <p>Email: <a href="mailto:nicolas.vannier93@gmail.com">nicolas.vannier93@gmail.com</a></p>
     <p>Phone: (+40) 07 56 46 18 38</p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/nvannier" target="_blank">linkedin.com/in/nvannier</a></p>
-</section>
+    <p><a href="assets/CV-VANNIER_Nicolas.pdf" download>Download my Resume</a></p>
+  </section>
 
-<footer>
+  <footer>
     &copy; 2024 Nicolas Vannier. All rights reserved. | <a href="https://github.com/Nayael" target="_blank">GitHub</a>
-</footer>
-
+  </footer>
 </body>
 </html>
