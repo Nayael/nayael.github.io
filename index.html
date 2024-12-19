@@ -15,6 +15,39 @@
       --light-text: #ffba54;
     }
 
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        max-height: 0;
+        opacity: 0;
+      }
+      to {
+        max-height: 500px;
+        opacity: 1;
+      }
+    }
+
     html {
       scroll-behavior: smooth;
     }
@@ -33,6 +66,8 @@
       color: var(--light-text);
       text-align: center;
       padding: 40px 20px;
+      position: relative;
+      z-index: 1;
     }
 
     header h1 {
@@ -79,11 +114,13 @@
       color: var(--light-text);
       padding: 10px 20px;
       border-radius: 5px;
-      transition: background 0.3s;
+      position: relative;
+      transition: background 0.3s, transform 0.3s;
     }
 
     #nav-links a:hover {
       background: var(--primary-color);
+      transform: translateY(-3px);
     }
 
     section {
@@ -93,6 +130,7 @@
       background: white;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-in-out;
     }
 
     section h2 {
@@ -106,6 +144,8 @@
       display: flex;
       gap: 20px;
       margin-bottom: 20px;
+      /* animation: fadeIn 1s ease-in-out; */
+      animation: slideIn 1s ease-in-out;
     }
 
     .portfolio-item img {
@@ -114,6 +154,11 @@
       object-fit: cover;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item img:hover {
+      transform: scale(1.05);
     }
 
     footer {
@@ -121,6 +166,7 @@
       color: white;
       text-align: center;
       padding: 20px 0;
+      animation: fadeIn 2s ease-in-out;
     }
 
     a {
@@ -164,6 +210,7 @@
 
       #menu-toggle:checked+#menu-icon+#nav-links {
         display: flex;
+        animation: slideDown 0.5s ease-in-out;
       }
 
       #nav-links a {
@@ -215,7 +262,7 @@
 <body>
   <header>
     <h1>NICOLAS VANNIER</h1>
-    <p>Full-stack Developer | Focused on Performance and User Experience</p>
+    <p><em>Full-stack Developer | Focused on Performance and User Experience</em></p>
   </header>
 
   <nav>
